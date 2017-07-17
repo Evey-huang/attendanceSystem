@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>注册界面</title>
+<link type="text/css" rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+$().ready(function(){
+	$("#username").blur(function(){
+		var name = $("#username").val();
+		var ob = $("#username").parent().parent().find(".msgBox");
+		if(name == ""){
+			ob.html("请填写账号");
+			ob.addClass('error');
+		}else{
+			if(name.length<4 || name.length>20){
+				ob.html("帐号由4~20数字、字母或下划线组成");
+				ob.addClass('error');
+			}else{
+				$.post("checkName.php",{name:name},function(re){
+					if(re.status != 1){
+						ob.html(re.msg);
+						ob.removeClass('ok').addClass('error');
+					}else{
+						ob.html(re.msg);
+						ob.removeClass('error').addClass('ok');
+					}
+				},'json');
+			}
+		}	
+	});
+	$("#btnRegister").click(function(){
+		var name = $("#username").val();
+		var pwd = $("#pwd").val();
+		var pwd_repeat = $("#pwd_repeat").val();
+		
+		$.post("regAction.php",{username:name,pwd:pwd,pwd_repeat:pwd_repeat},function(re){
+			console.log(re);
+			if(re.status == 0){
+				$("#username").parent().parent().find(".msgBox").html(re.msg);
+				$("#username").parent().parent().find(".msgBox").removeClass('ok').addClass('error');
+			}else if(re.status == -1){
+				$("#pwd_repeat").parent().parent().find(".msgBox").html(re.msg);
+				$("#pwd_repeat").parent().parent().find(".msgBox").removeClass('ok').addClass('error');
+			}else{
+				window.location.href = "login.html";
+			}
+		},"json");
+	});
+});
+</script>
+</head>
+<body>
+<div class="loginTop clear">
+	<div class="topLeft">
+		<img src="img/logo.png"/>
+		<span>欢 迎 注册</span>
+	</div>
+	<div class="topRight registerTr">
+		已有账号？<a href="login.html">立即登录</a>
+	</div>
+</div>
+<div class="registerContent clearfix">
+	<div class="registerTitle">
+	    <p>欢迎您的注册！后期即将开放更多的功能，敬请期待。</p>
+	</div>
+	<div class="registerBox">
+		<div class="boxTitle">
+			<ul>
+				<li class="boxTitle1">
+					<b></b>
+					<a href="#">账号注册</a>
+				</li>
+				<li class="boxTitle2">
+					<b></b>
+					<a href="#">手机注册</a>
+				</li>
+			</ul>
+		</div>
+		<div class="registerForm">
+			<form action="regAction.php" method="post">
+				<div class="regList clear">
+					<div class="formInput">
+						<span>用&nbsp;&nbsp;户&nbsp;&nbsp;名</span>
+						<input type="text" id="username" name="username" placeholder="您的账户名或登录名" onblur="checkName()"/>
+					</div>
+					<div class="msgBox" id="usernameMsg">帐号由4~20数字、字母或下划线组成</div>
+				</div>
+				<div class="regList clear">
+					<div class="formInput">
+						<span>设置密码</span>
+						<input type="password" id="pwd" name="pwd" placeholder="建议至少使用两种字符组合" onblur="checkPwd()"/>
+					</div>
+					<div class="msgBox" id="pwdMsg">支持6~20位字母、数字或特殊字符</div>
+				</div>
+				<div class="regList clear">
+					<div class="formInput">
+						<span>确认密码</span>
+						<input type="password" id="pwd_repeat" name="pwd_repeat" placeholder="请再次输入密码" onblur="checkRepwd()"/>
+					</div>
+					<div class="msgBox" id="repwdMsg">请再次输入密码</div>
+				</div>
+				<div class="regList clear">
+					<div class="formInput checkCode">
+						<span>验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
+						<input type="text" name="checkcode" placeholder="请输入验证码"/>
+						<img alt="验证码" src="yanzhengma.php">
+					</div>
+					<div class="msgBox"></div>
+				</div>
+				<div class="agreen">
+					<input type="checkbox" name="agreen" checked="">阅读并同意
+					<a href="#" id="protocol">《用户注册协议》</a>
+					<a href="#" class="blue" id="privacyProtocolTrigger">《隐私政策》</a>
+				</div>
+				<div class="registerTip">
+				   <button type="submit" class="btnRegister" id="btnRegister">立即注册</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="registerBoxR"></div>
+</div>
+<div class="footer clearfix">
+		<div class="footerLeft">
+			<div class="footerSns">
+			    <b>友情链接：</b>
+				<ul>
+					<li><a href="#" target="_blank" title="中国教育网">中国教育网</a></li>
+					<li class="liSns"><a href="#" target="_blank" title="重庆市教委">重庆市教委</a></li>
+					<li class="liSns"><a href="#" target="_blank" title="重庆大学">重庆大学</a></li>
+					<li class="liSns"><a href="#" target="_blank" title="学历查询">学历查询</a></li>
+					<li class="liSns"><a href="#" target="_blank" title="教育资讯">教育资讯</a></li>
+					<li class="liSns"><a href="#" target="_blank" title="中软国际">中软国际</a></li>
+				</ul>
+			</div>
+			<div class="footerLinks">
+				<ul>
+					<li><a href="#" target="_blank">关于我们</a></li>
+					<li><a href="#" target="_blank">公司首页</a></li>
+					<li><a href="#" target="_blank">招商合作</a></li>
+					<li><a href="#" target="_blank">手机网站</a></li>
+					<li><a href="#" target="_blank">技术支持</a></li>
+					<li><a href="#" target="_blank">人才招聘</a></li>
+					<li><a href="#" target="_blank">联系我们</a></li>
+					<li><a href="#" target="_blank">网站地图</a></li>
+					<li><a href="#" target="_blank">中软国际</a></li>
+					<li><a href="#" target="_blank">法律申明</a></li>
+				</ul>
+			</div><!-- footer-links结束 -->
+			<div class="copyright">技术支持重庆游致科技有限公司 copyright&copy2004-2017 XXXXX 版权所有</div>
+		</div><!-- footer-left结束 -->
+		<div class="footerRight">
+		    <img alt="二维码" src="img/weixin_qrcode.jpg">
+		</div>
+   </div>
+</body>
+</html>
