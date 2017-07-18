@@ -1,3 +1,19 @@
+<?php 
+date_default_timezone_set('Asia/Shanghai');
+    $uid = $_COOKIE['uid'];
+    if(empty($uid)){
+        header("location:login.html");
+    }
+    $mysql = mysqli_connect("localhost", "root", "", "shixun");
+    mysqli_set_charset($mysql, "utf8");
+    $sql_check = "select * from user where id='{$uid}'";
+    $re_check = mysqli_query($mysql, $sql_check);
+    $data = mysqli_fetch_assoc($re_check);
+    if(empty($data)){
+        echo "<script>alert('非法操作');location.href='login.html';</script>";
+    }
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,6 +25,12 @@
 	.checkConLeft ul li:nth-child(1):before,.checkConLeft ul li:nth-child(1):after{background-color:#0f8ff2;}
 	.checkConLeft ul li:before{content:"";position:absolute;top:18px;left:156px;width:17px;height:2px;}
 	.checkConLeft ul li:after{content:"";position:absolute;top:11px;left:173px;width:15px;height:15px;background-color:#eaeaea;border-radius:50%;}
+	.infoBox table{border:1px solid #d9d9d9;width:700px;font-size:14px;margin-bottom:20px;}
+	.infoBox th{height:50px;font-weight:500;}
+	.infoBox .infoTr th{border-bottom:1px solid #d9d9d9;}
+	.thLeft{width:140px;background:#fafafa;text-align:right;}
+	.thRight{text-align:left;padding-left:20px;}
+	#edit{color:#fff;background:#ffab16;font-size:14px;width:140px;height:40px;border:none;border-radius:5px;display:block;margin:0 auto;}
 </style>
 </head>
 <body>
@@ -18,7 +40,7 @@
 		<span></span>
 	</div>
 	<div class="topRight registerTr">
-		欢迎您，某某某 <a href="login.html">注销</a>
+		<span>欢迎您，<?php echo $data['account'];?> </span><a href="logout.php">注销</a>
 	</div>
 </div>
 <div class="checkWorkContent clearfix">
@@ -26,21 +48,21 @@
 		<div class="checkTopTitle">
 			<dl class="topInfo">
 				<dd class="userName">暂无昵称<b></b></dd>
-				<dd>账&nbsp;&nbsp;号：eveywong@163.com</dd>
-				<dd>上一次登录时间：2017-07-11 15:57:43</dd>
+				<dd>账&nbsp;&nbsp;号：<?php echo $data['account'];?></dd>
+				<dd>上一次登录时间：<?php echo $_COOKIE['lastLoginTime'];?></dd>
 			</dl>
 			<div class="changePasswd"><a href="#">修改密码</a></div>
 		</div>
 		<div class="checkNav">
 			<ul>
 				<li class="navLi1">
-				   <b></b><a href="personalInfo.html">个人信息</a>
+				   <b></b><a href="personalInfo.php">个人信息</a>
 				</li>
 				<li class="navLi2">
 				   <b></b><a href="#">我的课表</a>
 				</li>
 				<li class="navLi3">
-				   <b></b><a href="checkwork.html">考勤记录</a>
+				   <b></b><a href="attendanceRecord.php">考勤记录</a>
 				</li>
 			</ul>
 		</div>
@@ -52,8 +74,8 @@
 	<div class="checkContent clearfix">
 		<div class="checkConLeft">
 			<ul>
-				<li><a href="personalInfo.html">个人资料</a></li>
-				<li><a href="checkwork.html">我的考勤</a></li>
+				<li><a href="personalInfo.php">个人资料</a></li>
+				<li><a href="attendance.php">我的考勤</a></li>
 				<li><a href="#">我的课表</a></li>
 				<li><a href="#">账户安全</a></li>
 				<li><a href="#">我的消息</a></li>
@@ -65,7 +87,7 @@
 				<table>
 					<tr class="infoTr">
 						<th class="thLeft">姓名:</th>
-						<th class="thRight">EveyWong</th>
+						<th class="thRight"><?php echo $data['account'];?></th>
 					</tr>
 					<tr class="infoTr">
 						<th class="thLeft">性别:</th>

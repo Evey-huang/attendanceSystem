@@ -30,17 +30,77 @@ $().ready(function(){
 			}
 		}	
 	});
+	$("#pwd").blur(function(){
+		var pwd = $("#pwd").val();
+		var ob = $("#pwd").parent().parent().find(".msgBox");
+		if(pwd == ""){
+			ob.html("请填写密码");
+			ob.addClass('error');
+		}else{
+			if(pwd.length<6 || pwd.length>20){
+				ob.html("帐号由6~20数字、字母或下划线组成");
+				ob.addClass('error');
+			}else{
+				$.post("checkPwd.php",{pwd:pwd},function(re){
+					if(re.status != 1){
+						ob.html(re.msg);
+						ob.removeClass('ok').addClass('error');
+					}else{
+						ob.html(re.msg);
+						ob.removeClass('error').addClass('ok');
+					}
+				},'json');
+			}
+		}	
+	});
+	$("#pwd_repeat").blur(function(){
+		var pwd_repeat = $("#pwd_repeat").val();
+		var pwd=$("#pwd").val();
+		var ob = $("#pwd_repeat").parent().parent().find(".msgBox");
+		if(pwd_repeat == ""){
+			ob.html("请填写密码");
+			ob.addClass('error');
+		}else{
+			if(pwd_repeat==pwd){
+				ob.html("密码一致");
+				ob.addClass('ok');
+			}else{
+				ob.html("密码不一致");
+				ob.removeClass('ok').addClass('error');
+			}
+		}
+	});
+	$("#code").blur(function(){
+		var code = $("#code").val();
+		
+		var ob = $("#code").parent().parent().find(".msgBox");
+		if(code == ""){
+			ob.html("请填写验证码");
+			ob.addClass('error');
+		}else{
+			if($_SESSION['code']==$code){
+				ob.html("验证码正确");
+				ob.addClass('ok');
+			}else{
+				ob.html("验证码错误");
+				ob.removeClass('ok').addClass('error');
+			}
+		}
+	});
+	
 	$("#btnRegister").click(function(){
 		var name = $("#username").val();
 		var pwd = $("#pwd").val();
 		var pwd_repeat = $("#pwd_repeat").val();
+		var code=$("#code").val();
 		
-		$.post("regAction.php",{username:name,pwd:pwd,pwd_repeat:pwd_repeat},function(re){
+		$.post("regAction.php",{username:name,pwd:pwd,pwd_repeat:pwd_repeat,code:code},function(re){
 			console.log(re);
 			if(re.status == 0){
 				$("#username").parent().parent().find(".msgBox").html(re.msg);
 				$("#username").parent().parent().find(".msgBox").removeClass('ok').addClass('error');
-			}else if(re.status == -1){
+			}
+			else if(re.status == -1){
 				$("#pwd_repeat").parent().parent().find(".msgBox").html(re.msg);
 				$("#pwd_repeat").parent().parent().find(".msgBox").removeClass('ok').addClass('error');
 			}else{
@@ -48,6 +108,7 @@ $().ready(function(){
 			}
 		},"json");
 	});
+	
 });
 </script>
 </head>
@@ -97,17 +158,17 @@ $().ready(function(){
 				<div class="regList clear">
 					<div class="formInput">
 						<span>确认密码</span>
-						<input type="password" id="pwd_repeat" name="pwd_repeat" placeholder="请再次输入密码" onblur="checkRepwd()"/>
+						<input type="password" id="pwd_repeat" name="pwd_repeat" placeholder="请再次输入密码"/>
 					</div>
 					<div class="msgBox" id="repwdMsg">请再次输入密码</div>
 				</div>
 				<div class="regList clear">
 					<div class="formInput checkCode">
 						<span>验&nbsp;&nbsp;证&nbsp;&nbsp;码</span>
-						<input type="text" name="checkcode" placeholder="请输入验证码"/>
+						<input type="text" name="checkcode" id="code" placeholder="请输入验证码"/>
 						<img alt="验证码" src="yanzhengma.php">
 					</div>
-					<div class="msgBox"></div>
+					<div class="msgBox">请输入验证码</div>
 				</div>
 				<div class="agreen">
 					<input type="checkbox" name="agreen" checked="">阅读并同意

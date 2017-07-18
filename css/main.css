@@ -354,255 +354,6 @@ ul{list-style:none;}
 .registerForm .regList .msgBox.ok{
 	color:green;
 }
-/*-----------checkwork-------------*/
-.checkWorkContent{
-	width:1000px;
-	margin:0px auto;
-}
-.checkTop{
-	position:relative;
-	box-shadow:0 0 10px #b6b6b6; 
-	padding-bottom:20px;
-	margin-bottom:15px;
-}
-.checkTopTitle{
-	background:url(../img/user-top.jpg);
-	color:#fff;
-	position:relative;
-}
-.topInfo{
-	margin-left:250px;
-	padding:30px 0 10px 0;
-	line-height:30px;
-}
-.topInfo dd{
-	font-size:14px;
-}
-.topInfo .userName{
-	font-size:20px;
-}
-.userName b{
-	background:url(../img/my.png) no-repeat -203px -236px;
-	width:20px;
-	height:20px;
-	display:inline-block;
-	margin-left:10px;
-}
-.changePasswd{
-	width:140px;
-	height:40px;
-	background:#fbed55;
-	text-align:center;
-	line-height:40px;
-	border-radius:5px;
-	position:absolute;
-	top:40px;
-	right:45px;
-}
-.changePasswd a{
-	color:#6f3b13;
-}
-.checkNav{
-	margin:20px 0 0 200px;
-}
-.checkNav ul{
-	display:inline;
-}
-.checkNav ul li{
-	display:inline-block;
-	padding:0 80px 0 80px;
-	position:relative;
-	width:50px;
-}
-.checkNav ul li a{
-	position:absolute;
-	top:7px;
-	padding-left:10px;
-}
-.checkNav ul li a:hover{
-	color:#0d8dd4;
-}
-.navLi1 b,.navLi2 b,.navLi3 b{
-	width:40px;
-	height:40px;
-	display:inline-block;
-}
-.navLi1 b{
-	background:url(../img/user_icon01.png) no-repeat;
-}
-.navLi2 b{
-	background:url(../img/user_icon02.png) no-repeat;
-}
-.navLi3 b{
-	background:url(../img/user_icon03.png) no-repeat;
-}
-.photo{
-	position:absolute;
-	top:20px;
-	left:20px;
-}
-.photo p{
-	margin-left:40px;
-	color:#9c9c9c;
-}
-.checkContent{
-	border:1px solid #d9d9d9;
-	width:1000px;
-	height:650px;
-}
-.checkConLeft{
-	position:relative;
-	border-right:1px solid #eaeaea;
-	width:200px;
-	height:100%;
-	display:inline-block;
-}
-.checkConLeft ul{
-	padding:30px 0 0 20px;
-}
-.checkConLeft li{
-	width:155px;
-	height:35px;
-	line-height:35px;
-	background:#fafafa;
-	margin:10px 0 10px 0;
-	text-align:center;
-	border-radius:20px;
-	color:#6c6c91;
-	position:relative;
-}
-.checkConLeft li:hover{
-	border:1px solid #0d8dd4;
-}
-.checkConLeft li a:hover{
-	color:#0d8dd4;
-	
-}
-.checkConRight{
-	float:right;
-	width:750px;
-}
-.rightTitle{
-	height:25px;
-	margin:20px 0 20px 0;
-	border-left:3px solid #2b9ae7;
-}
-.rightTitle h1{
-	font-size:20px;
-	font-weight:normal;
-	padding-left:5px;
-}
-.contentUl ul{
-	border:1px solid #f1f1f1;
-	height:50px;
-	line-height:50px;
-	width:700px;
-	margin:10px 0 10px;
-	font-size:14px;
-	color:#6c6c6c;
-}
-.contentUl ul li{
-	display:inline-block;
-	padding:0 50px 0 20px;
-	position:relative;
-	
-}
-.contentUl ul li b{
-	width:20px;
-	height:20px;
-	background:url(../img/comments.png) no-repeat;
-	display:inline-block;
-	position:absolute;
-	top:17px;
-	left:1px;
-}
-.contentBottom{
-	margin:20px 0 0 280px;
-}
-.contentBottom a{
-	border:1px solid #ddd;
-	display:inline-block;
-	padding:10px;
-	color:#000;
-	background-color:#f7f7f7;
-	font-size:14px;
-}
-/*-----------checkWorkRecord--------*/
-.recordBox{
-	display:inline-block;
-	border:1px solid #eee;
-	width:350px;
-	height:150px;
-	margin:10px 5px 10px 5px;
-}
-.recordBox img{
-	height:150px;
-	line-height:150px;
-}
-.recordBox ul{
-	display:inline-block;
-	float:right;
-	margin-right:5px;
-}
-.recordBox ul li{
-	border:1px solid #eee;
-	width:70px;
-	height:30px;
-	margin-bottom:10px;
-	font-size:14px;
-	position:relative;
-}
-.recordBox .sign{
-	margin-top:15px;
-}
-.recordBox ul b{
-	width:20px;
-	height:20px;
-	background:url(../img/comments.png) no-repeat;
-	display:inline-block;
-	position:absolute;
-	top:10px;
-	left:5px;
-}
-.recordBox ul p{
-	padding:8px 0 0 30px;
-}
-/*-----------personalInfo--------*/
-.infoBox table{
-	border:1px solid #d9d9d9;
-	width:700px;
-	font-size:14px;
-	margin-bottom:20px;
-	
-}
-.infoBox th{
-	height:50px;
-	font-weight:500;
-}
-.infoBox .infoTr th{
-	border-bottom:1px solid #d9d9d9;
-	
-}
-.thLeft{
-	width:140px;
-	background:#fafafa;
-	text-align:right;
-}
-.thRight{
-	text-align:left;
-	padding-left:20px;
-}
-#edit{
-	color:#fff;
-	background:#ffab16;
-	font-size:14px;
-	width:140px;
-	height:40px;
-	border:none;
-	border-radius:5px;
-	display:block;
-	margin:0 auto;
-}
 /*---------footer------------*/
 .footer{
 	margin-top:30px;
@@ -677,4 +428,155 @@ ul{list-style:none;}
 	color:#808080;
 	margin:0 0 20px 150px;
 	border-radius:5px;
+}
+
+/*-----------页面共同部分-------------*/
+.checkWorkContent{
+	width:1000px;
+	margin:0px auto;
+}
+.checkTop{
+	position:relative;
+	box-shadow:0 0 10px #b6b6b6; 
+	padding-bottom:20px;
+	margin-bottom:15px;
+}
+.checkTopTitle{
+	background:url(../img/user-top.jpg);
+	color:#fff;
+	position:relative;
+}
+.topInfo{
+	margin-left:250px;
+	padding:30px 0 10px 0;
+	line-height:30px;
+}
+.topInfo dd{
+	font-size:14px;
+}
+.topInfo .userName{
+	font-size:20px;
+}
+.userName b{
+	background:url(../img/my.png) no-repeat -203px -236px;
+	width:20px;
+	height:20px;
+	display:inline-block;
+	margin-left:10px;
+}
+.changePasswd{
+	width:140px;
+	height:40px;
+	background:#fbed55;
+	text-align:center;
+	line-height:40px;
+	border-radius:5px;
+	position:absolute;
+	top:40px;
+	right:45px;
+}
+.changePasswd a{
+	color:#6f3b13;
+}
+.checkNav{
+	margin:20px 0 0 200px;
+}
+.checkNav ul{
+	display:inline;
+}
+.checkNav ul li{
+	display:inline-block;
+	padding:0 80px 0 80px;
+	position:relative;
+	width:50px;
+}
+.checkNav ul li a{
+	position:absolute;
+	top:7px;
+	padding-left:10px;
+}
+.checkNav ul li a:hover{
+	color:#0d8dd4;
+}
+.checkNav li b{
+	transition: All 0.4s ease-in-out;
+    -webkit-transition: All 0.4s ease-in-out;
+    -moz-transition: All 0.4s ease-in-out;
+    -o-transition: All 0.4s ease-in-out;
+}
+.checkNav li b:hover{
+	transform: rotateY(180deg) scale(1.2);
+            -webkit-transform: rotateY(180deg) scale(1.2) ;
+            -moz-transform: rotateY(180deg) scale(1.2);
+            -o-transform: rotateY(180deg) scale(1.2);
+            -ms-transform: rotateY(180deg) scale(1.2);
+}
+.navLi1 b,.navLi2 b,.navLi3 b{
+	width:40px;
+	height:40px;
+	display:inline-block;
+}
+.navLi1 b{
+	background:url(../img/user_icon01.png) no-repeat;
+}
+.navLi2 b{
+	background:url(../img/user_icon02.png) no-repeat;
+}
+.navLi3 b{
+	background:url(../img/user_icon03.png) no-repeat;
+}
+.photo{
+	position:absolute;
+	top:20px;
+	left:20px;
+}
+.photo p{
+	margin-left:40px;
+	color:#9c9c9c;
+}
+.checkContent{
+	border:1px solid #d9d9d9;
+	width:1000px;
+	height:650px;
+}
+.checkConLeft{
+	position:relative;
+	border-right:1px solid #eaeaea;
+	width:200px;
+	height:100%;
+	display:inline-block;
+}
+.checkConLeft ul{
+	padding:30px 0 0 20px;
+}
+.checkConLeft li{
+	width:155px;
+	height:35px;
+	line-height:35px;
+	background:#fafafa;
+	margin:10px 0 10px 0;
+	text-align:center;
+	border-radius:20px;
+	color:#6c6c91;
+	position:relative;
+}
+.checkConLeft li:hover{
+	border:1px solid #0d8dd4;
+}
+.checkConLeft li a:hover{
+	color:#0d8dd4;
+}
+.checkConRight{
+	float:right;
+	width:750px;
+}
+.rightTitle{
+	height:25px;
+	margin:20px 0 20px 0;
+	border-left:3px solid #2b9ae7;
+}
+.rightTitle h1{
+	font-size:20px;
+	font-weight:normal;
+	padding-left:5px;
 }
