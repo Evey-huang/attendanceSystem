@@ -23,17 +23,79 @@ date_default_timezone_set('Asia/Shanghai');
 <style type="text/css">
 	.checkConLeft ul li:nth-child(2){border:1px solid #0f8ff2;}
 	.checkConLeft ul li:nth-child(2):before,.checkConLeft ul li:nth-child(2):after{background-color:#0f8ff2;}
-	.checkConLeft ul li:before{content:"";position:absolute;top:18px;left:156px;width:17px;height:2px;}
-	.checkConLeft ul li:after{content:"";position:absolute;top:11px;left:173px;width:15px;height:15px;background-color:#eaeaea;border-radius:50%;}
-	.recordBox{display:inline-block;border:1px solid #eee;width:350px;height:150px;margin:10px 5px 10px 5px;}
-    .recordBox:hover{display:inline-block;border:1px solid #FFB90F;width:350px;height:150px;}
-    .recordBox img{height:150px;line-height:150px;}
-    .recordBox ul{display:inline-block;float:right;margin-right:5px;}
-    .recordBox ul li{border:1px solid #eee;width:70px;height:30px;margin-bottom:10px;font-size:14px;position:relative;}
-    .recordBox li:hover{border:1px solid #FFB90F;width:70px;height:30px;}
-    .recordBox .sign{margin-top:15px;}
-    .recordBox ul b{width:20px;height:20px;background:url(../img/comments.png) no-repeat;display:inline-block;position:absolute;top:10px;left:5px;}
-    .recordBox ul p{padding:8px 0 0 30px;}
+	.checkConLeft ul li:before,.checkConLeft ul li:after{
+	    content:"";
+    	position:absolute;
+	}
+	.checkConLeft ul li:before{
+    	top:18px;
+    	left:156px;
+		
+    	width:17px;
+    	height:2px;
+    }
+	.checkConLeft ul li:after{
+        top:11px;
+        left:173px;
+		
+		border-radius:50%;
+        width:15px;
+        height:15px;
+		
+        background-color:#eaeaea; 
+    }
+    .recordBox,.recordBox img{
+	    border-radius: 3px;
+    }
+	.recordBox{
+    	display:inline-block;	
+    	float:left;
+    	
+    	border: 1px solid #f1f1f1;
+    	width: 340px;
+        height: 170px;
+    		
+    	margin: 5px;	
+        padding: 10px;
+        
+        transition: all .2s;
+    }
+    .recordBox:hover{
+    	border-color:#ffb83b;
+    	background:#fafafa;
+    	box-shadow:0 0 8px #999;
+    }
+    .recordBox img{
+    	width: 230px;
+        height: 170px;
+    }
+    .recordBox ul{
+    	float:right;
+        width: 100px;
+        padding-left: 4px;
+    }
+	.recordBox li a{
+    	display: block;
+    	overflow: hidden;
+    				
+    	width: 70px;
+        height: 28px;
+    		
+        font-size: 12px;
+    	line-height: 28px;	
+        text-align: center;
+        vertical-align: middle;
+        
+        color: #6c6c6c;
+        background: url(img/my.png) no-repeat -92px -247px;
+        
+        margin: 20px auto;
+        padding-left: 20px;
+    }
+    .recordBox li a:hover{
+    	color:#fff;
+        background: url(img/my.png) no-repeat 0px -247px;
+    }
 </style>
 </head>
 <body>
@@ -89,56 +151,68 @@ date_default_timezone_set('Asia/Shanghai');
 			<div class="rightTitle"><h1>我的考勤</h1></div>
 			<div class="recordContent">
 				<div class="recordBox clear">
-					<img alt="教室图片" src="img/recordImg.jpg">
+					<a href="attendance.php">
+					    <img alt="教室图片" src="img/recordImg.jpg">
+					</a>
 					<ul>
-						<li class="sign"><a href="attendanceAction.php?address=崇礼楼&action=1"><b></b><p>签到</p></a></li>
-						<li><a href="attendanceAction.php?address=崇礼楼&action=2"><b></b><p>迟到</p></a></li>
-						<li><a href="attendanceAction.php?address=崇礼楼&action=3"><b></b><p>请假</p></a></li>
+						<li><a href="attendanceAction.php?address=崇礼楼&action=1">签到</a></li>
+						<li><a href="attendanceAction.php?address=崇礼楼&action=2">迟到</a></li>
+						<li><a href="attendanceAction.php?address=崇礼楼&action=3">请假</a></li>
 					</ul>
 				</div>
 				<div class="recordBox">
-					<img alt="教室图片" src="img/recordImg.jpg">
+					<a href="attendance.php">
+					    <img alt="教室图片" src="img/recordImg.jpg">
+					</a>
 					<ul>
-						<li class="sign"><a href="attendanceAction.php?address=崇仁楼&action=1"><b></b><p>签到</p></a></li>
-						<li><a href="attendanceAction.php?address=崇仁楼&action=2"><b></b><p>迟到</p></a></li>
-						<li><a href="attendanceAction.php?address=崇仁楼&action=3"><b></b><p>请假</p></a></li>
+						<li><a href="attendanceAction.php?address=崇仁楼&action=1">签到</a></li>
+						<li><a href="attendanceAction.php?address=崇仁楼&action=2">迟到</a></li>
+						<li><a href="attendanceAction.php?address=崇仁楼&action=3">请假</a></li>
 					</ul>
 				</div>
 				<div class="recordBox">
-					<img alt="教室图片" src="img/recordImg.jpg">
+					<a href="attendance.php">
+					    <img alt="教室图片" src="img/recordImg.jpg">
+					</a>
 					<ul>
-						<li class="sign"><a href="attendanceAction.php?address=崇义楼&action=1"><b></b><p>签到</p></a></li>
-						<li><a href="attendanceAction.php?address=崇义楼&action=2"><b></b><p>迟到</p></a></li>
-						<li><a href="attendanceAction.php?address=崇义楼&action=3"><b></b><p>请假</p></a></li>
+						<li><a href="attendanceAction.php?address=崇义楼&action=1">签到</a></li>
+						<li><a href="attendanceAction.php?address=崇义楼&action=2">迟到</a></li>
+						<li><a href="attendanceAction.php?address=崇义楼&action=3">请假</a></li>
 					</ul>
 				</div>
 				<div class="recordBox">
-					<img alt="教室图片" src="img/recordImg.jpg">
+					<a href="attendance.php">
+					    <img alt="教室图片" src="img/recordImg.jpg">
+					</a>
 					<ul>
-						<li class="sign"><a href="attendanceAction.php?address=钩深楼&action=1"><b></b><p>签到</p></a></li>
-						<li><a href="attendanceAction.php?address=钩深楼&action=2"><b></b><p>迟到</p></a></li>
-						<li><a href="attendanceAction.php?address=钩深楼&action=3"><b></b><p>请假</p></a></li>
+						<li><a href="attendanceAction.php?address=钩深楼&action=1">签到</a></li>
+						<li><a href="attendanceAction.php?address=钩深楼&action=2">迟到</a></li>
+						<li><a href="attendanceAction.php?address=钩深楼&action=3">请假</a></li>
 					</ul>
 				</div>
 				<div class="recordBox">
-					<img alt="教室图片" src="img/recordImg.jpg">
+					<a href="attendance.php">
+					    <img alt="教室图片" src="img/recordImg.jpg">
+					</a>
 					<ul>
-						<li class="sign"><a href="attendanceAction.php?address=诚意楼&action=1"><b></b><p>签到</p></a></li>
-						<li><a href="attendanceAction.php?address=诚意楼&action=2"><b></b><p>迟到</p></a></li>
-						<li><a href="attendanceAction.php?address=诚意楼&action=3"><b></b><p>请假</p></a></li>
+						<li><a href="attendanceAction.php?address=诚意楼&action=1">签到</a></li>
+						<li><a href="attendanceAction.php?address=诚意楼&action=2">迟到</a></li>
+						<li><a href="attendanceAction.php?address=诚意楼&action=3">请假</a></li>
 					</ul>
 				</div>
 				<div class="recordBox">
-					<img alt="教室图片" src="img/recordImg.jpg">
+					<a href="attendance.php">
+					    <img alt="教室图片" src="img/recordImg.jpg">
+					</a>
 					<ul>
-						<li class="sign"><a href="attendanceAction.php?address=正心楼&action=1"><b></b><p>签到</p></a></li>
-						<li><a href="attendanceAction.php?address=正心楼&action=2"><b></b><p>迟到</p></a></li>
-						<li><a href="attendanceAction.php?address=正心楼&action=3"><b></b><p>请假</p></a></li>
+						<li><a href="attendanceAction.php?address=正心楼&action=1">签到</a></li>
+						<li><a href="attendanceAction.php?address=正心楼&action=2">迟到</a></li>
+						<li><a href="attendanceAction.php?address=正心楼&action=3">请假</a></li>
 					</ul>
-				</div>
-			</div>
-		</div><!-- recordBox结束 -->
-	</div><!-- recordContent结束 -->
+				</div><!-- recordBox结束 -->
+			</div><!-- recordContent结束 -->
+ 		</div><!--checkConRight结束 -->
+	</div><!-- checkContent结束 -->
 </div><!-- checkWorkContent结束 -->
 
 <div class="footer clearfix">
@@ -167,9 +241,9 @@ date_default_timezone_set('Asia/Shanghai');
 					<li><a href="#" target="_blank">中软国际</a></li>
 					<li><a href="#" target="_blank">法律申明</a></li>
 				</ul>
-			</div><!-- footer-links结束 -->
+			</div><!-- footerLinks结束 -->
 			<div class="copyright">技术支持重庆游致科技有限公司 copyright&copy2004-2017 XXXXX 版权所有</div>
-		</div><!-- footer-left结束 -->
+		</div><!-- footerLeft结束 -->
 		<div class="footerRight">
 		    <img alt="二维码" src="img/weixin_qrcode.jpg">
 		</div>

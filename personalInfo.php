@@ -12,7 +12,7 @@ date_default_timezone_set('Asia/Shanghai');
     if(empty($data)){
         echo "<script>alert('非法操作');location.href='login.html';</script>";
     }
-
+    
 ?>
 <!DOCTYPE html>
 <html>
@@ -83,7 +83,7 @@ date_default_timezone_set('Asia/Shanghai');
 		</div>
 		<div class="checkConRight perInfo">
 			<div class="rightTitle"><h1>个人资料</h1></div>
-			<form class="infoBox" action="" method="post">
+			<form class="infoBox" action="infoAction.php" method="post">
 				<table>
 					<tr class="infoTr">
 						<th class="thLeft">姓名:</th>
@@ -123,7 +123,7 @@ date_default_timezone_set('Asia/Shanghai');
 					</tr>
 				</table>
 			</form>
-			<input type="button" id="edit" onclick="" value="编辑"/>
+			<input type="submit" id="edit" name="Submit" value="编辑"/>
 		</div>
 	</div>
 </div>

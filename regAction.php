@@ -1,9 +1,9 @@
 <?php
-    session_start();
+    
     $name = $_POST['username'];
     $pwd= $_POST['pwd'];
     $pwd_repeat = $_POST['pwd_repeat'];
-    $code=$_POST['code'];
+   
     if(empty($name) || empty($pwd) || empty($pwd_repeat)){
         $arr = array('msg'=>'请仔细填写','status'=>0);
         echo json_encode($arr);

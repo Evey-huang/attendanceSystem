@@ -92,9 +92,9 @@ $().ready(function(){
 		var name = $("#username").val();
 		var pwd = $("#pwd").val();
 		var pwd_repeat = $("#pwd_repeat").val();
-		var code=$("#code").val();
 		
-		$.post("regAction.php",{username:name,pwd:pwd,pwd_repeat:pwd_repeat,code:code},function(re){
+		
+		$.post("regAction.php",{username:name,pwd:pwd,pwd_repeat:pwd_repeat},function(re){
 			console.log(re);
 			if(re.status == 0){
 				$("#username").parent().parent().find(".msgBox").html(re.msg);

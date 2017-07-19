@@ -18,8 +18,10 @@ ul{list-style:none;}
 .loginTop .topLeft span{
 	position:relative;
 	top:-48px;
+	
 	border-left:1px solid #dddddd;
 	padding-left:20px;
+	
 	font-weight:600;
 	font-size:20px;
 	color:#6c6c6c;
@@ -36,31 +38,37 @@ ul{list-style:none;}
 }
 .loginTop .topRight a b{
 	display:inline-block;
+	
+	margin-right:4px;
 	width:18px;
 	height:14px;
-	background:url(../img/q-icon.png) no-repeat;
+	
 	vertical-align:middle;
-	margin-right:4px;
+	background:url(../img/q-icon.png) no-repeat;
 }
 .content{
-	background:#008bc0;
 	min-width:1000px;
+	background:#008bc0;
 }
 .main{
+	position:relative;
+	
+	margin:0px auto;
 	width:1000px;
 	height:550px;
+	
 	background:url(../img/bg_2.png) no-repeat;
-	margin:0px auto;
-	position:relative;
 }
 .main .loginBox{
-	width:360px;
-	height:400px;
 	position:absolute;
 	top:50px;
 	right:20px;
-	background:#fff;
+	
 	border-radius:5px;
+	width:360px;
+	height:400px;
+	
+	background:#fff;
 }
 .main .loginBox .title{
 	height:50px;
@@ -76,68 +84,68 @@ ul{list-style:none;}
 	height:300px;
 }
 .loginItem .nameList{
+	position:relative;
+	
+	border:1px solid #ddd;
 	width:300px;
 	height:38px;
 	margin:0px auto;
 	margin-top:30px;
-	position:relative;
-	border:1px solid #ddd;
 }
 .loginItem .nameList b{
 	display:inline-block;
-	width:38px;
-	height:38px;
-	background:url(../img/pwd-icons-new.png) no-repeat;
+	
 	position:absolute;
 	top:0px;
 	left:0px;
+	
 	border-right:1px solid #ddd;
+	width:38px;
+	height:38px;
+	
+	background:url(../img/pwd-icons-new.png) no-repeat;
 }
 .loginItem .nameList b:hover{
 	background:url(../img/pwd-icons-new.png) no-repeat 0px -96px;
 }
-.loginItem .nameList input{
+.loginItem .nameList input,.loginItem .pwdList input{
 	width:250px;
-	padding:10px 0px;
 	height:17px;
+	padding:10px 0px;
 	padding-left:50px;
 	border:0px;
 }
 .loginItem .pwdList{
+	position:relative;
+	
+	border:1px solid #ddd;
 	width:300px;
 	height:38px;
 	margin:0px auto;
 	margin-top:30px;
-	position:relative;
-	border:1px solid #ddd;
-	
 }
 .loginItem .pwdList b{
 	display:inline-block;
-	width:38px;
-	height:38px;
-	background:url(../img/pwd-icons-new.png) no-repeat -48px 0px;
+	
 	position:absolute;
 	top:0px;
 	left:0px;
+	
 	border-right:1px solid #ddd;
+	width:38px;
+	height:38px;
+	background:url(../img/pwd-icons-new.png) no-repeat -48px 0px;
 }
 .loginItem .pwdList b:hover{
 	background:url(../img/pwd-icons-new.png) no-repeat -48px -96px;
 }
-.loginItem .pwdList input{
-	width:250px;
-	padding:10px 0px;
-	height:17px;
-	padding-left:50px;
-	border:0px;
-}
 .loginItem .wjmm{
 	width:300px;
 	height:50px;
+	margin:0px auto;
+	
 	line-height:50px;
 	text-align:right;
-	margin:0px auto;
 }
 .loginItem .wjmm a{
 	font-size:12px;
@@ -147,22 +155,25 @@ ul{list-style:none;}
 	color:red;
 }
 .loginItem .btnList .btnLogin{
+	display:block;
+	
+	border-radius:5px;
 	width:300px;
 	height:40px;
+	margin:0px auto;
+	
 	line-height:40px;
 	color:#fff;
 	font-size:20px;
 	font-weight:500;
-	margin:0px auto;
-	display:block;
+	
 	background:#009bcb;
 	border:0px;
 	cursor:pointer;
-	border-radius:5px;
 }
 .loginLink{
-	margin:15px 0px 15px 30px;
 	position:relative;
+	margin:15px 0px 15px 30px;
 }
 .bindQq,.bindWechat
 {
@@ -216,10 +227,10 @@ ul{list-style:none;}
 	font-size:14px;
 }
 .turnToLogout b{
-	background:url(../img/pwd-icons-new.png) no-repeat -104px -66px;
+	display:inline-block;
 	width:25px;
 	height:25px;
-	display:inline-block;
+	background:url(../img/pwd-icons-new.png) no-repeat -104px -66px;
 }
 
 /*------------register-------------*/
@@ -237,13 +248,14 @@ ul{list-style:none;}
 	border-radius:5px;
 }
 .registerTitle{
-	background:#008bc0;
-	color:#fff;
-	font-size:14px;
 	height:40px;
 	line-height:40px;
 	padding-left:30px;
 	border-radius:5px 5px 0 0;
+	
+	background:#008bc0;
+	color:#fff;
+	font-size:14px;
 }
 .registerBox{
 	display:inline-block;
@@ -253,8 +265,9 @@ ul{list-style:none;}
 	border-bottom:2px solid #e4e4e4;
 	width:640px;
 	height:30px;
-	line-height:30px;
+	
 	margin-bottom:20px;
+	line-height:30px;
 }
 .boxTitle ul{
 	display:inline;
@@ -269,40 +282,42 @@ ul{list-style:none;}
 .boxTitle1{
 	border-bottom:2px solid #008bc0;
 }
-.boxTitle1 a{
-	padding-left:20px;
-}
-.boxTitle2 a{
+.boxTitle1 a,.boxTitle2 a{
 	padding-left:20px;
 }
 .boxTitle1 b,.boxTitle2 b{
-	width:15px;
-	height:25px;
 	display:inline-block;
 	position:absolute;
+	
+	width:15px;
+	height:25px;
+}
+.boxTitle1 b,.boxTitle2 b{
+	top:5px;
 }
 .boxTitle1 b{
 	background:url(../img/reg_icon.png) no-repeat -334px -320px;
-	top:5px;
 }
 .boxTitle2 b{
 	background:url(../img/reg_icon.png) no-repeat -348px -320px;
-	top:5px;
 }
 .registerForm .formInput{
+	float:left;
+	position:relative;
+	
 	width:400px;
 	height:50px;
 	line-height:50px;
 	border:1px solid #ccc;
 	margin:20px 0 20px 0;
-	position:relative;
-	float:left;
 }
 .msgBox{
 	float:left;
-    line-height:48px;
+	
     margin-left:10px;
 	margin-top:20px;
+	line-height:48px;
+	
     font-size: 12px;
     color: #999;
 }
@@ -336,10 +351,11 @@ ul{list-style:none;}
 .registerTip .btnRegister{
 	width:260px;
 	height:40px;
-	background:#ffb839;
-	color:#fff;
 	border:none;
 	margin:20px 0 50px 70px;
+	
+	background:#ffb839;
+	color:#fff;
 }
 .registerBoxR{
 	float:right;
@@ -387,8 +403,8 @@ ul{list-style:none;}
 	border-bottom:1px solid #ddd;
 	width:850px;
 	height:40px;
-	font-size:16px;
 	margin-left:22px;
+	font-size:16px;
 }
 .footerSns ul,.footerLinks ul{
 	display:inline;
@@ -437,14 +453,15 @@ ul{list-style:none;}
 }
 .checkTop{
 	position:relative;
-	box-shadow:0 0 10px #b6b6b6; 
-	padding-bottom:20px;
+	
 	margin-bottom:15px;
+	padding-bottom:20px;
+	box-shadow:0 0 10px #b6b6b6; 
 }
 .checkTopTitle{
+	position:relative;
 	background:url(../img/user-top.jpg);
 	color:#fff;
-	position:relative;
 }
 .topInfo{
 	margin-left:250px;
@@ -458,22 +475,25 @@ ul{list-style:none;}
 	font-size:20px;
 }
 .userName b{
-	background:url(../img/my.png) no-repeat -203px -236px;
+	display:inline-block;
+	
 	width:20px;
 	height:20px;
-	display:inline-block;
 	margin-left:10px;
+	
+	background:url(../img/my.png) no-repeat -203px -236px;
 }
 .changePasswd{
-	width:140px;
-	height:40px;
-	background:#fbed55;
-	text-align:center;
-	line-height:40px;
-	border-radius:5px;
 	position:absolute;
 	top:40px;
 	right:45px;
+	
+	width:140px;
+	height:40px;
+	border-radius:5px;
+	background:#fbed55;
+	text-align:center;
+	line-height:40px;
 }
 .changePasswd a{
 	color:#6f3b13;
@@ -486,8 +506,8 @@ ul{list-style:none;}
 }
 .checkNav ul li{
 	display:inline-block;
-	padding:0 80px 0 80px;
 	position:relative;
+	padding:0 80px 0 80px;
 	width:50px;
 }
 .checkNav ul li a{
@@ -506,15 +526,15 @@ ul{list-style:none;}
 }
 .checkNav li b:hover{
 	transform: rotateY(180deg) scale(1.2);
-            -webkit-transform: rotateY(180deg) scale(1.2) ;
-            -moz-transform: rotateY(180deg) scale(1.2);
-            -o-transform: rotateY(180deg) scale(1.2);
-            -ms-transform: rotateY(180deg) scale(1.2);
+    -webkit-transform: rotateY(180deg) scale(1.2) ;
+    -moz-transform: rotateY(180deg) scale(1.2);
+    -o-transform: rotateY(180deg) scale(1.2);
+    -ms-transform: rotateY(180deg) scale(1.2);
 }
 .navLi1 b,.navLi2 b,.navLi3 b{
+	display:inline-block;
 	width:40px;
 	height:40px;
-	display:inline-block;
 }
 .navLi1 b{
 	background:url(../img/user_icon01.png) no-repeat;
@@ -540,25 +560,28 @@ ul{list-style:none;}
 	height:650px;
 }
 .checkConLeft{
+	display:inline-block;
 	position:relative;
 	border-right:1px solid #eaeaea;
 	width:200px;
 	height:100%;
-	display:inline-block;
 }
 .checkConLeft ul{
 	padding:30px 0 0 20px;
 }
 .checkConLeft li{
+	position:relative;
+	
 	width:155px;
 	height:35px;
-	line-height:35px;
-	background:#fafafa;
-	margin:10px 0 10px 0;
-	text-align:center;
 	border-radius:20px;
+	margin:10px 0 10px 0;
+	
+	line-height:35px;
+	text-align:center;
+	
 	color:#6c6c91;
-	position:relative;
+	background:#fafafa;
 }
 .checkConLeft li:hover{
 	border:1px solid #0d8dd4;

@@ -29,22 +29,79 @@
 <meta charset="UTF-8">
 <title>考勤记录</title>
 <link type="text/css" rel="stylesheet" href="css/main.css">
+<script src="js/jquery-1.10.2.min.js"></script>
 <style type="text/css">
     .rightBox {padding: 10px 0;}
-    .user-attendanceR-list {width: 724px;height: 30px;padding: 10px;border: 1px solid #f1f1f1; border-radius: 3px;margin: 10px 0px;transition: all .2s;}
-    .user-attendanceR-list:hover{border-color:#ffb83b;background:#fafafa;box-shadow:0 0 8px #999}
-    .user-attendanceR-detail {line-height:30px;font-size:12px;color:#6c6c6c;cursor:default;padding-left:30px;}
+    .user-attendanceR-list {
+    	border:1px solid #f1f1f1;
+        border-radius:3px;
+        width:724px;
+        height:30px;
+    	
+    	margin:10px 0px;
+        padding:10px;       
+        
+        transition: all .2s;
+    }
+    .user-attendanceR-list:hover{
+        border-color:#ffb83b;
+        background:#fafafa;
+        box-shadow:0 0 8px #999
+    }
+    .user-attendanceR-detail {
+    	padding-left:30px;
+    	
+        line-height:30px;
+        font-size:12px;
+        color:#6c6c6c;
+    	
+        cursor:default;
+    }
     .user-attendanceR-detail .time{display:inline-block;width:150px;}
     .user-attendanceR-detail .address{display:inline-block;width:200px;}
     .user-attendanceR-detail span.right{color:#0f8ff2;}
     .user-attendanceR-detail span.warning{color:#ff8d13;}
     .user-attendanceR-detail span.error{color:#f25277;}
-    .btn-attendance {width: 70px;height: 28px;display: inline-block;text-align: center;overflow: hidden;vertical-align: middle;color: #6c6c6c;font-size:12px;line-height: 28px;margin-left: 140px;padding-left: 20px;background: url(img/my.png) no-repeat -92px -247px;}
+    .btn-attendance {
+    	display: inline-block;
+    	overflow: hidden;
+    	
+    	margin-left: 140px;
+        padding-left: 20px;
+        width: 70px;
+        height: 28px;
+        
+        text-align: center;
+        vertical-align: middle;
+        font-size:12px;
+        line-height: 28px;
+    	
+        color: #6c6c6c;
+        background: url(img/my.png) no-repeat -92px -247px;
+    }
     .btn-attendance:hover{color:#fff;background: url(img/my.png) no-repeat 0px -247px;}
-    .page_list{text-align:right;margin-top:20px;margin-bottom:20px;font-size:12px;}
-    .page_list a{display:inline-block;text-decoration:none;height: 26px;line-height: 26px;padding: 0 14px;margin-right: 5px;color: #333;border: 1px solid #ddd;background: #f7f7f7;}
+    .page_list{
+        margin:20px 0 20px 0;
+        text-align:right;
+        font-size:12px;
+    }
+    .page_list a{
+        display:inline-block;
+    	
+    	border: 1px solid #ddd;
+    	margin-right: 5px;
+    	padding: 0 14px;
+        height: 26px;
+        
+        line-height: 26px;
+        text-decoration:none;
+        
+        color: #333;
+        background: #f7f7f7;
+    }
     .page_list a:hover{background: #fff;}
 </style>
+
 </head>
 <body>
 <div class="loginTop clear">
